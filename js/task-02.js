@@ -15,17 +15,19 @@ const ingredients = [
 ];
 
 
-// const listIngrediends = document.querySelector('ul');
-// const listAll = [];
-// for (let i = 0; i < ingredients.length; i += 1) {
-//   const listEl = document.createElement("li");
-//   listEl.textContent = ingredients[i];
-//   listEl.classList.add('item');
-//   listAll.push(listEl);
-  // console.log("listEl", listEl);
-// }
+const ingrediendsList = document.querySelector('#ingredients');
 
-// console.log("listAll", listAll);
+const makeIngredients = ingredientsAll => {
+  return ingredientsAll.map(ingredient => {
+    const listEl = document.createElement("li");
+    listEl.textContent = ingredient;
+    listEl.classList.add('item');
+    return listEl;
+  });
+};
 
+const elements = makeIngredients(ingredients);
+
+ingrediendsList.append(...elements);
 
 
