@@ -17,8 +17,8 @@ const galleryList = document.querySelector('.gallery');
 console.log("galleryList", galleryList);
 const makeGalleryImage = ({ url, alt }) => {
   
-  return `<li> 
-            <img src = ${url} alt = ${alt}> 
+  return `<li class = "image-wrap"> 
+            <img class = "image-item" src = ${url} alt = ${alt} width="370" height="294"> 
           </li>`;
 };
 

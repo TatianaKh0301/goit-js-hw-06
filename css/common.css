@@ -23,18 +23,23 @@ button {
   cursor: pointer;
 }
 
+
 .gallery {
   display: flex;
-  margin-left: -30px;
-  width: calc(100% / 3 - 30px);
-}
+ }
 
 .image-wrap {
-   margin: 20px;
+  list-style: none;
+  width: calc(100% / 3 - 30px);  
+  background-color: green;
+}
+
+.image-wrap:not(:first-child) {
+  margin-left: 30px;
 }
 
 .image-item {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
