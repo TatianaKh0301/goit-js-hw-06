@@ -31,7 +31,6 @@ button {
 .image-wrap {
   list-style: none;
   width: calc(100% / 3 - 30px);  
-  background-color: green;
 }
 
 .image-wrap:not(:first-child) {
