@@ -17,20 +17,24 @@ function onInputPassword(event) {
 
 function onFormSubmit(event) {
     event.preventDefault();
-    if(inputEmail.textContent === '' || inputPassword.textContent === '') {
-        alert("ВСІ ПОЛЯ ПОВИННІ БУТИ ЗАПОВНЕНІ!!!!")
-    } else {
-        const formElements = event.currentTarget.elements;
-        const mail = formElements.email.value;
-        const password = formElements.password.value;
-        const formData = { 
-            mail, 
-            password,
-        };
+    
+    const formElements = event.currentTarget.elements;
+    const mail = formElements.email.value;
+    const password = formElements.password.value;
+    const formData = { 
+        mail, 
+        password,
+    };
 
+    if(inputEmail.textContent === '' || inputPassword.textContent === '' || mail === '' || password === '') {
+        alert("ВСІ ПОЛЯ ПОВИННІ БУТИ ЗАПОВНЕНІ!!!!");
+    } else {
         console.log(formData);
         event.currentTarget.reset();
-    }
+        console.log("mail", mail);
+        console.log("password", password);
+    }    
+}
 
     
-}
+
