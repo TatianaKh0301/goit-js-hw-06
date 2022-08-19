@@ -10,8 +10,6 @@ function onInputValue (event) {
 };
 
 function onInputCheck (event) {
-    console.log("inputValidation.textContent.length", inputValidation.textContent.length);
-    console.log("dataLength", dataLength);
     if(inputValidation.textContent.length === dataLength) {
         inputValidation.classList.add('valid');
     } else {
