@@ -14,15 +14,17 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-console.log("galleryList", galleryList);
+
 const makeGalleryImage = ({ url, alt }) => {
-  
+
   return `<li class = "image-wrap"> 
-            <img class = "image-item" src = ${url} alt = ${alt} width="370" height="294"> 
+            <img class = "image-item" src = ${url} alt = ${alt}> 
           </li>`;
 };
 
 const makeGalleryImages = images.map(makeGalleryImage).join(' ');
 
 galleryList.insertAdjacentHTML('afterbegin', makeGalleryImages);
+
+
 
