@@ -13,9 +13,12 @@ function onInputValue (event) {
 };
 
 function onInputCheck(event) {
-    if(inputValidationTextLength === dataLength) {
+    console.log("inputValidation", inputValidation);
+    if(inputValidationTextLength === dataLength || inputValidation.classList.contains('invalid')) {
+        inputValidation.classList.remove('invalid');
         inputValidation.classList.add('valid');
     } else {
+        inputValidation.classList.remove('valid');
         inputValidation.classList.add('invalid');
     }
 };
