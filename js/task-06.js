@@ -13,7 +13,6 @@ function onInputValue (event) {
 };
 
 function onInputCheck(event) {
-    console.log("inputValidation", inputValidation);
     if(inputValidationTextLength === dataLength || inputValidation.classList.contains('invalid')) {
         inputValidation.classList.remove('invalid');
         inputValidation.classList.add('valid');
